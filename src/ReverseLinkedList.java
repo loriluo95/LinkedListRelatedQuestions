@@ -1,6 +1,6 @@
 public class ReverseLinkedList {
 
-    public ListNode iterative(ListNode list) {
+    public static ListNode iterative(ListNode list) {
         ListNode prev = null;
         ListNode curr = list;
 
@@ -13,7 +13,7 @@ public class ReverseLinkedList {
         return prev;
     }
 
-    public ListNode recursive(ListNode list) {
+    public static ListNode recursive(ListNode list) {
         if (list == null || list.next == null)
             return list;
 
@@ -21,5 +21,17 @@ public class ReverseLinkedList {
         list.next.next = list;
         list.next = null;
         return reversedList;
+    }
+
+    public static void main(String[] args) {
+        ListNode testNode = new ListNode(1);
+        testNode.next = new ListNode(2);
+        testNode.next.next = new ListNode(3);
+        System.out.println(testNode.val);
+        ListNode result1 = iterative(testNode);
+        System.out.println(result1.val);
+        ListNode result2 = iterative(result1);
+        System.out.println(result2.val);
+
     }
 }
