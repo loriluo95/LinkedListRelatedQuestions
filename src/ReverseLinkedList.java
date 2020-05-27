@@ -32,6 +32,5 @@ public class ReverseLinkedList {
         System.out.println(result1.val);
         ListNode result2 = iterative(result1);
         System.out.println(result2.val);
-
     }
 }
