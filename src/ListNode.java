@@ -11,4 +11,13 @@ public class ListNode {
             list = list.next;
         }
     }
+
+    public int size(ListNode list) {
+        int length = 0;
+        while (list != null) {
+            length++;
+            list = list.next;
+        }
+        return length;
+    }
 }

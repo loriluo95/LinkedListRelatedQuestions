@@ -30,7 +30,7 @@ public class ReverseLinkedList {
         System.out.println(testNode.val);
         ListNode result1 = iterative(testNode);
         System.out.println(result1.val);
-        ListNode result2 = iterative(result1);
+        ListNode result2 = recursive(result1);
         System.out.println(result2.val);
     }
 }

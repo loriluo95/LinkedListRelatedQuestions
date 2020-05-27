@@ -8,9 +8,8 @@ public class FindNthNode {
             n--;
         }
 
-        if (n > 1)
+        if (n >= 1)
             throw new IllegalArgumentException("ListNode has less than nth node");
-
         return list.val;
     }
     public static void main(String[] args) {

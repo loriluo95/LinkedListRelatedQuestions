@@ -6,10 +6,10 @@ public class FindNthNodeII {
         ListNode curr = dummyHead;
         int length = 0;
         while (curr != null) {
-            length++;
             curr = curr.next;
+            length++;
         }
-
+        if (length <= n) throw new IllegalArgumentException("ListNode too short");
         int indexFromHead = length - n;
         curr = dummyHead;
 
